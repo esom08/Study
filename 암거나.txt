@@ -1,0 +1,14 @@
+초반 github 연결
+1. cd 로컬주소
+2. git init
+3. git remote add origin 깃주소
+4. git remote -v // 버전 확인
+4-1 git remote remove origin //삭제하기
+
+
+github 동기화 하는 방법
+
+1. git add . // 새로운 파일 생겼을 때 혹은 수정사항 생겼을 때
+2. git commit -m "메세지(암거나 써도 됨)" // git 에 올린거임
+3. git push origin master // master은 branch 이름임 // 이제 github 에 동기화
+3-1. git pull origin master // github 버전으로 동기화
