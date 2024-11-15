@@ -18,7 +18,9 @@
 # openList에 중복 노드 있으면 F가 제일 작은 노드 선택
 
 # closeList에는 openList에서 F가 가장 작은 노드 추가
+# 시간복잡도는 H에 따라 다름
 
+import heapq #priority queue
 
 matrix = [
     [True, True, True, False, False, False, False],
@@ -29,3 +31,17 @@ matrix = [
     [True, False, True, False, True, False, False],
     [True, True, True, True, True, True, True],
 ]
+
+class Node:
+    def __init__(self, parent=None, position=None):
+        self.parent = parent
+        self.position = position
+        self.g = 0
+        self.h = 0
+        self.f = 0
+        
+    def __eq__(self, other):
+        return self.position == other.position
+    
+    def __lt__(self, other):
+        return self.f < other.f
